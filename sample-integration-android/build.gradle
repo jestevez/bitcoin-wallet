@@ -1,18 +1,22 @@
 apply plugin: 'com.android.application'
 
+allprojects {
+    repositories {
+        mavenLocal()
+    }
+}
+
 configurations {
     all*.exclude group: 'com.google.android', module: 'android'
 }
 
 dependencies {
-    compile project(':integration-android')
-    compile 'org.bitcoinj:bitcoinj-core:0.12.3'
+    implementation project(':integration-android')
+    implementation 'org.bitcoinj:onixcoinj-core:0.14.7.2'
 }
-
 android {
     compileSdkVersion 'android-15'
-    buildToolsVersion '26.0.3'
-
+    buildToolsVersion '27.0.3'
     lintOptions { abortOnError false }
 
     defaultConfig {

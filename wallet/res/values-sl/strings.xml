@@ -33,9 +33,9 @@
   <string name="wallet_options_safety_menu">Varnost</string>
   <string name="wallet_options_safety">O varnosti</string>
   <string name="wallet_options_donate">Donacije</string>
-  <string name="wallet_donate_address_label">Donacija za Bitcoin Wallet</string>
+  <string name="wallet_donate_address_label">Donacija za Onixcoin Wallet</string>
   <string name="wallet_low_storage_dialog_title">Na notranjem pomnilniškem mediju zmanjkuje prostora!</string>
-  <string name="wallet_low_storage_dialog_msg">Bitcoin Wallet uporablja notranji pomnilnik, da si zapomni nakazila in bloke. Če tu zmanjka prostora, bo denarnica prenehala delovati in vaši novci bodo v nevarnosti!\n\nŽelite odpreti Application Manager, da boste lahko odstranili odvečne aplikacije?</string>
+  <string name="wallet_low_storage_dialog_msg">Onixcoin Wallet uporablja notranji pomnilnik, da si zapomni nakazila in bloke. Če tu zmanjka prostora, bo denarnica prenehala delovati in vaši novci bodo v nevarnosti!\n\nŽelite odpreti Application Manager, da boste lahko odstranili odvečne aplikacije?</string>
   <string name="wallet_low_storage_dialog_button_apps">Upravljanje z aplikacijami</string>
   <string name="wallet_timeskew_dialog_title">Preverite nastavitve časa!</string>
   <string name="wallet_timeskew_dialog_msg">Čas na vaši napravi prehiteva ali zaostaja za %d minut. Zaradi tega verjetno ne morete prejemati ali pošiljati bitcoinov.\n\nProsimo, preverite in popravite svoje časovne nastavitve.</string>
@@ -45,7 +45,7 @@
   <string name="wallet_version_dialog_button_market">Google Play</string>
   <string name="wallet_version_dialog_button_binary">Prenos</string>
   <string name="wallet_old_sdk_dialog_title">Verzija Androida je zastarela</string>
-  <string name="wallet_old_sdk_dialog_message">Možno je, da bližnja naslednja verzija aplikacije Bitcoin Wallet vaše naprave ne bo več podpirala. V nekaterih primerih bo potem lahko težko priti do novcev, ki jih imate shranjene tu.\n\nČe niste popolnoma prepričani, kaj počnete, svetujemo, da novce čim prej prenesete drugam.</string>
+  <string name="wallet_old_sdk_dialog_message">Možno je, da bližnja naslednja verzija aplikacije Onixcoin Wallet vaše naprave ne bo več podpirala. V nekaterih primerih bo potem lahko težko priti do novcev, ki jih imate shranjene tu.\n\nČe niste popolnoma prepričani, kaj počnete, svetujemo, da novce čim prej prenesete drugam.</string>
   <string name="send_coins_activity_title">Pošlji novce</string>
   <string name="send_coins_fragment_request_payment_request_progress">Pridobivam podpis od %s..</string>
   <string name="send_coins_fragment_request_payment_request_failed_title">Pridobivanje podpisa spodletelo</string>

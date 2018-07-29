@@ -31,7 +31,7 @@ import org.bitcoinj.core.Address;
 import org.bitcoinj.core.Coin;
 import org.bitcoinj.core.DumpedPrivateKey;
 import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.NetworkParameters;
+import org.onixcoinj.params.AbstractOnixcoinParams;
 import org.bitcoinj.core.Sha256Hash;
 import org.bitcoinj.core.Transaction;
 import org.bitcoinj.core.TransactionConfidence;
@@ -668,7 +668,7 @@ public class SweepWalletFragment extends Fragment {
     private static class FakeTransaction extends Transaction {
         private final Sha256Hash hash;
 
-        public FakeTransaction(final NetworkParameters params, final Sha256Hash hash) {
+        public FakeTransaction(final AbstractOnixcoinParams params, final Sha256Hash hash) {
             super(params);
             this.hash = hash;
         }

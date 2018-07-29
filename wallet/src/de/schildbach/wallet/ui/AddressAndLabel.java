@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 
 import org.bitcoinj.core.Address;
 import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.NetworkParameters;
+import org.onixcoinj.params.AbstractOnixcoinParams;
 
 import com.google.common.base.Objects;
 
@@ -42,7 +42,7 @@ public class AddressAndLabel implements Parcelable {
         this.label = label;
     }
 
-    public AddressAndLabel(final NetworkParameters addressParams, final String address, @Nullable final String label)
+    public AddressAndLabel(final AbstractOnixcoinParams addressParams, final String address, @Nullable final String label)
             throws AddressFormatException {
         this(Address.fromBase58(addressParams, address), label);
     }

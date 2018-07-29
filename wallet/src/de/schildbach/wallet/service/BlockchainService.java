@@ -20,6 +20,7 @@ package de.schildbach.wallet.service;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,6 +52,7 @@ import org.bitcoinj.core.listeners.AbstractPeerDataEventListener;
 import org.bitcoinj.core.listeners.PeerConnectedEventListener;
 import org.bitcoinj.core.listeners.PeerDataEventListener;
 import org.bitcoinj.core.listeners.PeerDisconnectedEventListener;
+import org.bitcoinj.net.discovery.DnsDiscovery;
 import org.bitcoinj.net.discovery.MultiplexingDiscovery;
 import org.bitcoinj.net.discovery.PeerDiscovery;
 import org.bitcoinj.net.discovery.PeerDiscoveryException;
@@ -715,7 +717,8 @@ public class BlockchainService extends LifecycleService {
                 peerGroup.setMaxConnections(connectTrustedPeerOnly ? 1 : maxConnectedPeers);
                 peerGroup.setConnectTimeoutMillis(Constants.PEER_TIMEOUT_MS);
                 peerGroup.setPeerDiscoveryTimeoutMillis(Constants.PEER_DISCOVERY_TIMEOUT_MS);
-
+                peerGroup.setMinBroadcastConnections(1);
+                //peerGroup.addPeerDiscovery(new DnsDiscovery(Constants.NETWORK_PARAMETERS));
                 peerGroup.addPeerDiscovery(new PeerDiscovery() {
                     private final PeerDiscovery normalPeerDiscovery = MultiplexingDiscovery
                             .forServices(Constants.NETWORK_PARAMETERS, 0);
@@ -726,6 +729,15 @@ public class BlockchainService extends LifecycleService {
                         final List<InetSocketAddress> peers = new LinkedList<InetSocketAddress>();
 
                         boolean needsTrimPeersWorkaround = false;
+
+
+
+                        try { log.info("force getTrustPeer  {} ", Constants.NETWORK_PARAMETERS.getTrustPeer());
+                            InetSocketAddress onixcoin = new InetSocketAddress(Constants.NETWORK_PARAMETERS.getTrustPeer(),  Constants.NETWORK_PARAMETERS.getPort());
+                            peers.add(onixcoin);
+                        } catch (Exception e) { log.error("add getTrustPeer {}", e);}
+
+
 
                         if (hasTrustedPeer) {
                             log.info(

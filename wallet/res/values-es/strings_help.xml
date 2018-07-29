@@ -3,11 +3,11 @@
   <string name="help_wallet">
 <![CDATA[
 		<p>
-			La parte superior izquierda de la pantalla muestra su balance entre Bitcoins y la moneda nacional que elija.
+			La parte superior izquierda de la pantalla muestra su balance entre Onixcoins y la moneda nacional que elija.
 			Toque para ir a la lista de monedas nacionales, y toque en una de las monedas para seleccionarla como predeterminada.
 		</p>
 		<p>
-			El código QR de la derecha contiene su dirección de Bitcoin, y se puede usar para ser escaneado por un tercero.
+			El código QR de la derecha contiene su dirección de Onixcoin, y se puede usar para ser escaneado por un tercero.
 			Toque el código QR para ver la versión más grande.
 		</p>
 		<p>
@@ -16,7 +16,7 @@
 			Toque en la entrada para añadir las direcciones de los remitentes o destinatarios a su lista de contactos.
 		</p>
 		<p>
-			Puede enviar o solicitar Bitcoins tocando los botones en la barra de acción.
+			Puede enviar o solicitar Onixcoins tocando los botones en la barra de acción.
 			Más opciones disponibles en el menú de opciones.
 		</p>
 	]]>
@@ -24,18 +24,18 @@
   <string name="help_request_coins">
 <![CDATA[
 		<p>
-			Mediante este cuadro de diálogo puedes solicitar bitcoins de otra persona (que debería tener instalada Bitcoin Wallet).
+			Mediante este cuadro de diálogo puedes solicitar onixcoins de otra persona (que debería tener instalada Onixcoin Wallet).
 		</p>
 		<p>
-			En primer lugar, puedes introducir la cantidad de bitcoins que se desea solicitar.
+			En primer lugar, puedes introducir la cantidad de onixcoins que se desea solicitar.
 		</p>
 		<p>
 			A continuación, puedes hacer que la otra persona explore el código QR generado,
 			o bien enviar tu solicitud a una persona remota mediante el botón de compartir de la barra de acciones.
-			La otra persona tendrá que acceder a la URL de Bitcoin.
+			La otra persona tendrá que acceder a la URL de Onixcoin.
 		</p>
 		<p>
-			En ambos casos, a la otra persona se le mostrará un cuadro de diálogo para enviar bitcoins con todos los campos completados.
+			En ambos casos, a la otra persona se le mostrará un cuadro de diálogo para enviar onixcoins con todos los campos completados.
 			Si está de acuerdo, bastará con que acepte la transacción.
 		</p>
 	]]>
@@ -43,16 +43,16 @@
   <string name="help_send_coins">
 <![CDATA[
 		<p>
-			Has iniciado el proceso de enviar bitcoins.
-			Has llegado aquí bien a través de la pantalla principal o bien al acceder a una URL Bitcoin en tu navegador móvil.
+			Has iniciado el proceso de enviar onixcoins.
+			Has llegado aquí bien a través de la pantalla principal o bien al acceder a una URL Onixcoin en tu navegador móvil.
 		</p>
 		<p>
-			En primer lugar, debes introducir la dirección Bitcoin receptora del pago.
+			En primer lugar, debes introducir la dirección Onixcoin receptora del pago.
 			La dirección se irá autocompletando con las entradas conocidas de la libreta de direcciones.
-			También puedes explorar códigos QR con direcciones Bitcoin o solicitudes de bitcoins pulsando el botón QR de la barra de acciones.
+			También puedes explorar códigos QR con direcciones Onixcoin o solicitudes de onixcoins pulsando el botón QR de la barra de acciones.
 		</p>
 		<p>
-			A continuación, podrás ver cuántos bitcoins puedes gastar en este momento.
+			A continuación, podrás ver cuántos onixcoins puedes gastar en este momento.
 			Cualquier discrepancia que haya con el saldo de la pantalla principal se debe a cantidades no confirmadas que aún no pueden gastarse.
 		</p>
 		<p>
@@ -60,7 +60,7 @@
 		</p>
 		<p>
 			Puedes llevar a cabo una transacción sin conexión.
-			Se enviará la siguiente vez que se reinicie Bitcoin Wallet.
+			Se enviará la siguiente vez que se reinicie Onixcoin Wallet.
 			Si quieres que se procese una transacción lo más rápido posible, asegúrate de tener una buena conexión (WLAN).
 		</p>
 		<p>
@@ -73,20 +73,20 @@
   <string name="help_safety">
 <![CDATA[
 		<p>
-			<b>Algunos comentarios sobre la seguridad de tus Bitcoins:</b>
+			<b>Algunos comentarios sobre la seguridad de tus Onixcoins:</b>
 		</p>
 		<p>
-			Los bitcoins en Bitcoin Wallet se almacenan en el dispositivo.
-			<b>Si pierdes tu dispositivo, pierdes tus Bitcoins.</b>
+			Los onixcoins en Onixcoin Wallet se almacenan en el dispositivo.
+			<b>Si pierdes tu dispositivo, pierdes tus Onixcoins.</b>
 			Esto es lo mismo que ocurriría con tu dinero en una cartera convencional.
 		</p>
 		<p>
-			<b>Antes de desinstalar Bitcoin Wallet</b> (o de eliminar los datos de aplicación o el almacenamiento del dispositivo), <b>transfiere tus Bitcoins a otra cartera</b>.
-			Los bitcoins que queden en el dispositivo se perderán.
+			<b>Antes de desinstalar Onixcoin Wallet</b> (o de eliminar los datos de aplicación o el almacenamiento del dispositivo), <b>transfiere tus Onixcoins a otra cartera</b>.
+			Los onixcoins que queden en el dispositivo se perderán.
 		</p>
 		<p>
 			<b>Las transacciones no se pueden deshacer</b>.
-			Si envías bitcoins por error, no hay manera de recuperarlos a menos que conozcas al receptor y acepte devolvértelos.
+			Si envías onixcoins por error, no hay manera de recuperarlos a menos que conozcas al receptor y acepte devolvértelos.
 		</p>
 		<p>
 			<b>¡Mantén seguro tu dispositivo Android!</b>
@@ -95,7 +95,7 @@
 		</p>
 		<p>
 			¡Minimiza el riesgo!
-			<b>Utiliza Bitcoin Wallet solamente para cantidades pequeñas</b> de uso diario.
+			<b>Utiliza Onixcoin Wallet solamente para cantidades pequeñas</b> de uso diario.
 		</p>
 	]]>
 	</string>
@@ -105,9 +105,9 @@
 			<b>Notas técnicas:</b>
 		</p>
 		<p>
-			Como un monedero SPV/ligero, Bitcoin Wallet sigue la cadena de la mayor prueba-de-trabajo (algunas veces también llamado la \"cadena mas larga\", la \"cadena ganadora\" o la \"Cadena de bloques Bitcoin\").
+			Como un monedero SPV/ligero, Onixcoin Wallet sigue la cadena de la mayor prueba-de-trabajo (algunas veces también llamado la \"cadena mas larga\", la \"cadena ganadora\" o la \"Cadena de bloques Onixcoin\").
 			Solo recibirás los pagos entrantes y podrás pagar en esa cadena.
-			No se pueden hacer garantías sobre Bitcoins en cadenas minoritarias, eso es, cadenas con menos prueba-de-trabajo.
+			No se pueden hacer garantías sobre Onixcoins en cadenas minoritarias, eso es, cadenas con menos prueba-de-trabajo.
 		</p>
 		<p>
 			En el pasado, las cadenas minoritarias siempre se han convertido irrelevantes en poco tiempo.

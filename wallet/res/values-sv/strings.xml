@@ -11,7 +11,7 @@
   <string name="blockchain_state_progress_stalled">Synkroniseringen har avstannat</string>
   <string name="blockchain_state_progress_problem_storage">Synkronisering: Lagringsproblem</string>
   <string name="blockchain_state_progress_problem_network">Synkronisering: Nätverksproblem</string>
-  <string name="wallet_address_fragment_clipboard_msg">Bitcoinadressen kopierades</string>
+  <string name="wallet_address_fragment_clipboard_msg">Onixcoinadressen kopierades</string>
   <string name="wallet_address_dialog_fragment_hint">För att skydda din integritet ändras din adress varje gång du mottar en betalning.</string>
   <string name="wallet_balance_fragment_too_much">Det här är ett stort belopp att bära omkring på i fickan. Flytta gärna över en del till en säkrare plats.</string>
   <string name="wallet_balance_fragment_replaying">Saldot är otillgängligt under reprisen.</string>
@@ -39,19 +39,19 @@
   <string name="wallet_options_encrypt_keys_change">Ändra PIN-kod</string>
   <string name="wallet_options_safety">Säkerhetsinfo</string>
   <string name="wallet_options_donate">Dricksa / Donera</string>
-  <string name="wallet_donate_address_label">Donera till Bitcoin Wallet</string>
+  <string name="wallet_donate_address_label">Donera till Onixcoin Wallet</string>
   <string name="wallet_low_storage_dialog_title">Lagringsutrymme snart slut</string>
-  <string name="wallet_low_storage_dialog_msg">Bitcoin Wallet använder intern lagring för att komma ihåg transaktioner och block. Om lagringsutrymmet tar slut kommer den att sluta fungera och dina bitcoin hamnar i riskzonen!\n\nVill du öppna Application Manager för att avinstallera onödiga appar?</string>
+  <string name="wallet_low_storage_dialog_msg">Onixcoin Wallet använder intern lagring för att komma ihåg transaktioner och block. Om lagringsutrymmet tar slut kommer den att sluta fungera och dina bitcoin hamnar i riskzonen!\n\nVill du öppna Application Manager för att avinstallera onödiga appar?</string>
   <string name="wallet_low_storage_dialog_button_apps">Hantera appar</string>
   <string name="wallet_timeskew_dialog_title">Kontrollera inställningar för datum &amp; tid</string>
-  <string name="wallet_timeskew_dialog_msg">Enhetens tid är fel med %d minuter. Du kan förmodligen inte skicka eller ta emot Bitcoin på grund av detta.\n\nDu bör kontrollera och korrigera tiden och tidszonen.</string>
+  <string name="wallet_timeskew_dialog_msg">Enhetens tid är fel med %d minuter. Du kan förmodligen inte skicka eller ta emot Onixcoin på grund av detta.\n\nDu bör kontrollera och korrigera tiden och tidszonen.</string>
   <string name="wallet_version_dialog_title">En ny version är tillgänglig!</string>
   <string name="wallet_version_dialog_msg">Denna version löser viktiga buggar. För mer information, se ändringsloggen på Google Play.</string>
   <string name="wallet_version_dialog_msg_deprecated">Om du inte ser en uppdatering så beror det förmodligen på att din version av Android inte längre stöds.</string>
   <string name="wallet_version_dialog_button_market">Google Play</string>
   <string name="wallet_version_dialog_button_binary">Ladda ner</string>
   <string name="wallet_old_sdk_dialog_title">Android-versionen är inaktuell</string>
-  <string name="wallet_old_sdk_dialog_message">Chansen är stor att någon av de kommande releaserna av Bitcoin Wallet inte kommer att fungera på din enhet längre. I vissa fall kan det bli svårt att spendera dina tillgångar med den här enheten.\n\nSåvida du inte vet vad du gör, rekommenderas att du flyttar dina bitcoin snart.</string>
+  <string name="wallet_old_sdk_dialog_message">Chansen är stor att någon av de kommande releaserna av Onixcoin Wallet inte kommer att fungera på din enhet längre. I vissa fall kan det bli svårt att spendera dina tillgångar med den här enheten.\n\nSåvida du inte vet vad du gör, rekommenderas att du flyttar dina bitcoin snart.</string>
   <string name="send_coins_activity_title">Skicka bitcoin</string>
   <string name="send_coins_fragment_request_payment_request_progress">Hämtar signatur från %s</string>
   <string name="send_coins_fragment_request_payment_request_failed_title">Hämtning av signatur misslyckades</string>
@@ -155,7 +155,7 @@
   <string name="transaction_row_message_purpose_raise_fee">Den här transaktionen höjer nätverksavgiften för en tidigare betalning.</string>
   <string name="transaction_row_message_own_unbroadcasted">Denna betalning har inte skickats ännu.</string>
   <string name="transaction_row_message_received_direct">Denna betalning har mottagits direkt. Det finns en risk att den aldrig kommer att kunna användas.</string>
-  <string name="transaction_row_message_received_unconfirmed_delayed">Bekräftelsen på den här betalningen är fördröjd, förmodligen på grund av hög belastning på Bitcoin-nätverket.</string>
+  <string name="transaction_row_message_received_unconfirmed_delayed">Bekräftelsen på den här betalningen är fördröjd, förmodligen på grund av hög belastning på Onixcoin-nätverket.</string>
   <string name="transaction_row_message_received_unconfirmed_unlocked">Den här betalningen borde bli spenderbar inom några minuter.</string>
   <string name="transaction_row_message_received_in_conflict">Den här betalningen har en ökad risk att inte gå igenom! Vänta gärna på en verifiering.</string>
   <string name="transaction_row_message_received_dead">Denna betalning har återförts av avsändaren.</string>
@@ -216,7 +216,7 @@
   <string name="scan_camera_permission_dialog_message">För att kunna skanna QR-koder, måste du tillåta åtkomst till kameran.</string>
   <string name="input_parser_io_error">Kan inte läsa av data:\n%s</string>
   <string name="input_parser_cannot_classify">Kan inte känna igen inmatning:\n%s</string>
-  <string name="input_parser_invalid_bitcoin_uri">Ogiltig Bitcoin URI:\n%s</string>
+  <string name="input_parser_invalid_bitcoin_uri">Ogiltig Onixcoin URI:\n%s</string>
   <string name="input_parser_invalid_address">Fick en ogiltig bitcoinadress!\n(Blandar du ihop Mainnet/Testnet?)</string>
   <string name="input_parser_unverifyable_paymentrequest">Kan inte verifiera betalningsförfrågant:\n%s</string>
   <string name="input_parser_invalid_paymentrequest">Ogiltig betalningsförffrågan:\n%s</string>
@@ -276,7 +276,7 @@
   <string name="about_license_title">Licens</string>
   <string name="about_source_title">Källkod</string>
   <string name="about_category_credits">Den här appen använder…</string>
-  <string name="about_credits_bitcoinj_title">bitcoinj %s, en implementation av Bitcoin-protokollet</string>
+  <string name="about_credits_bitcoinj_title">bitcoinj %s, en implementation av Onixcoin-protokollet</string>
   <string name="about_credits_zxing_title">ZXing, ett bibliotek för bearbetning av QR-koder</string>
   <string name="about_credits_scrypt_title">Scrypt, implementerad av Will Glozer och Colin Percival</string>
   <string name="about_community_googleplus_title">Google+-community</string>
@@ -286,11 +286,11 @@
   <string name="notification_coins_received_msg">Mottagit %s</string>
   <string name="notification_peers_connected_msg">Ansluten till %d noder</string>
   <string name="notification_inactivity_title">Du har fortfarande bitcoin på den här enheten!</string>
-  <string name="notification_inactivity_message">Kom ihåg att din plånbokssumma på %s kommer att försvinna om du avinstallerar Bitcoin-appen utan att skicka bort den först.</string>
-  <string name="notification_inactivity_message_donate">Om du inte bryr dig om dina bitcoin kan du också donera dem till Bitcoin Wallet-projektet.</string>
+  <string name="notification_inactivity_message">Kom ihåg att din plånbokssumma på %s kommer att försvinna om du avinstallerar Onixcoin-appen utan att skicka bort den först.</string>
+  <string name="notification_inactivity_message_donate">Om du inte bryr dig om dina bitcoin kan du också donera dem till Onixcoin Wallet-projektet.</string>
   <string name="notification_inactivity_action_dismiss">Påminn senare</string>
   <string name="notification_inactivity_action_dismiss_forever">Påminn mig inte</string>
-  <string name="appwidget_wallet_balance_title">Bitcoin-saldo</string>
+  <string name="appwidget_wallet_balance_title">Onixcoin-saldo</string>
   <!--generic buttons-->
   <string name="button_ok">OK</string>
   <string name="button_dismiss">Avsluta</string>

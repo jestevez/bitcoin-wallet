@@ -257,36 +257,41 @@ public final class SendingAddressesFragment extends FancyListFragment {
             public boolean onActionItemClicked(final ActionMode mode, final MenuItem item) {
                 switch (item.getItemId()) {
                 case R.id.sending_addresses_context_send:
+                    log.info("antes de sending_addresses_context_send {}", getAddress(position));
                     handleSend(getAddress(position), getLabel(position));
 
                     mode.finish();
                     return true;
 
                 case R.id.sending_addresses_context_edit:
+                    log.info("antes de sending_addresses_context_edit {}", getAddress(position));
                     EditAddressBookEntryFragment.edit(getFragmentManager(), getAddress(position));
 
                     mode.finish();
                     return true;
 
                 case R.id.sending_addresses_context_remove:
+                    log.info("antes de sending_addresses_context_remove {}", getAddress(position));
                     handleRemove(getAddress(position));
 
                     mode.finish();
                     return true;
 
                 case R.id.sending_addresses_context_show_qr:
+                    log.info("antes de sending_addresses_context_show_qr {}", getAddress(position));
                     handleShowQr(getAddress(position), getLabel(position));
 
                     mode.finish();
                     return true;
 
                 case R.id.sending_addresses_context_copy_to_clipboard:
+                    log.info("antes de sending_addresses_context_copy_to_clipboard {}", getAddress(position));
                     handleCopyToClipboard(getAddress(position));
-
+                    log.info("despues de sending_addresses_context_copy_to_clipboard ");
                     mode.finish();
                     return true;
                 }
-
+                log.info("NO ENTRO EN EL CASE {}", getAddress(position));
                 return false;
             }
 
@@ -318,7 +323,7 @@ public final class SendingAddressesFragment extends FancyListFragment {
     }
 
     private void handleCopyToClipboard(final String address) {
-        viewModel.clip.setClipData(ClipData.newPlainText("Bitcoin address", address));
+        viewModel.clip.setClipData(ClipData.newPlainText("Onixcoin address", address));
         log.info("sending address copied to clipboard: {}", address.toString());
         new Toast(activity).toast(R.string.wallet_address_fragment_clipboard_msg);
     }

@@ -677,7 +677,9 @@ public final class SendCoinsFragment extends Fragment {
         try {
             final String addressStr = receivingAddressView.getText().toString().trim();
             if (!addressStr.isEmpty()
-                    && Constants.NETWORK_PARAMETERS.equals(Address.getParametersFromAddress(addressStr))) {
+                    && isValidAddr(addressStr)
+                    // && Constants.NETWORK_PARAMETERS.equals(Address.getParametersFromAddress(addressStr))
+                    ) {
                 final String label = addressBookDao.resolveLabel(addressStr);
                 viewModel.validatedAddress = new AddressAndLabel(Constants.NETWORK_PARAMETERS, addressStr, label);
                 receivingAddressView.setText(null);
@@ -685,6 +687,15 @@ public final class SendCoinsFragment extends Fragment {
             }
         } catch (final AddressFormatException x) {
             // swallow
+        }
+    }
+
+    private boolean isValidAddr(String addressStr) {
+        try {
+            Address.fromBase58(Constants.NETWORK_PARAMETERS, addressStr);
+            return true;
+        } catch (AddressFormatException e) {
+            return false;
         }
     }
 

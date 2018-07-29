@@ -41,7 +41,7 @@ import org.bitcoinj.core.Address;
 import org.bitcoinj.core.AddressFormatException;
 import org.bitcoinj.core.DumpedPrivateKey;
 import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.NetworkParameters;
+import org.onixcoinj.params.AbstractOnixcoinParams;
 import org.bitcoinj.core.ScriptException;
 import org.bitcoinj.core.Sha256Hash;
 import org.bitcoinj.core.Transaction;
@@ -222,7 +222,7 @@ public class WalletUtils {
     }
 
     public static Wallet restoreWalletFromProtobufOrBase58(final InputStream is,
-            final NetworkParameters expectedNetworkParameters) throws IOException {
+            final AbstractOnixcoinParams expectedNetworkParameters) throws IOException {
         is.mark((int) Constants.BACKUP_MAX_CHARS);
 
         try {
@@ -239,7 +239,7 @@ public class WalletUtils {
     }
 
     public static Wallet restoreWalletFromProtobuf(final InputStream is,
-            final NetworkParameters expectedNetworkParameters) throws IOException {
+            final AbstractOnixcoinParams expectedNetworkParameters) throws IOException {
         try {
             final Wallet wallet = new WalletProtobufSerializer().readWallet(is, true, null);
 
@@ -255,7 +255,7 @@ public class WalletUtils {
     }
 
     public static Wallet restorePrivateKeysFromBase58(final InputStream is,
-            final NetworkParameters expectedNetworkParameters) throws IOException {
+            final AbstractOnixcoinParams expectedNetworkParameters) throws IOException {
         final BufferedReader keyReader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 
         // create non-HD wallet
@@ -279,7 +279,7 @@ public class WalletUtils {
         }
     }
 
-    public static List<ECKey> readKeys(final BufferedReader in, final NetworkParameters expectedNetworkParameters)
+    public static List<ECKey> readKeys(final BufferedReader in, final AbstractOnixcoinParams expectedNetworkParameters)
             throws IOException {
         try {
             final DateFormat format = Iso8601Format.newDateTimeFormatT();

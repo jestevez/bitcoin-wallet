@@ -3,7 +3,7 @@
   <string name="help_wallet">
 <![CDATA[
 		<p>
-			A bal felső része a képernyőnek megjeleníti az egyenleged Bitcoin-ban és egy választott nemzeti valutát.
+			A bal felső része a képernyőnek megjeleníti az egyenleged Onixcoin-ban és egy választott nemzeti valutát.
 			Érintsd meg a nemzeti valuták listájához, és érints meg egy valutát az alapértelmezettként választáshoz.
 		</p>
 		<p>
@@ -24,15 +24,15 @@
   <string name="help_request_coins">
 <![CDATA[
 		<p>
-			Ezt a dialógot használva kérhetsz érméket másik személytől (akinek már fel van telepítve a Bitcoin Wallet).
+			Ezt a dialógot használva kérhetsz érméket másik személytől (akinek már fel van telepítve a Onixcoin Wallet).
 		</p>
 		<p>
-			Először adj meg egy Bitcoin összeget a kéréshez.
+			Először adj meg egy Onixcoin összeget a kéréshez.
 		</p>
 		<p>
 			Aztán egyikőtöknek megvan a generált QR kód a másik személy által beolvasva.
 			Vagy elküldheted a kérésed egy irányító személynek az akciósávban a megosztás gombbal.
-			A másik személynek rá kell kattintania a Bitcoin URL-re.
+			A másik személynek rá kell kattintania a Onixcoin URL-re.
 		</p>
 		<p>
 			Akárhogy is, de a másik személy bemutat egy dialógot az érmeküldésről minden mezővel előre kitöltve.
@@ -44,15 +44,15 @@
 <![CDATA[
 		<p>
 			Érmeküldési folyamatot kezdeményeztél.
-			Vagy a főképernyőn keresztül jöttél ide, vagy rákattintottál a Bitcoin URL-re a mobil böngésződben.
+			Vagy a főképernyőn keresztül jöttél ide, vagy rákattintottál a Onixcoin URL-re a mobil böngésződben.
 		</p>
 		<p>
-			Először írd be a Bitcoin címet a fizetéshez.
+			Először írd be a Onixcoin címet a fizetéshez.
 			A cím automatikusan kitöltődik a címjegyzékedből ismert bejegyzésekből.
-			Be is olvashatsz QR kódokat Bitcoin címekkel vagy Bitcoin kéréseket az akciósávon a QR gomb megnyomásával.
+			Be is olvashatsz QR kódokat Onixcoin címekkel vagy Onixcoin kéréseket az akciósávon a QR gomb megnyomásával.
 		</p>
 		<p>
-			Következőként láthatod, hogy mennyi Bitcoin-t tudsz ebben a pillanatban elkölteni.
+			Következőként láthatod, hogy mennyi Onixcoin-t tudsz ebben a pillanatban elkölteni.
 			Bármilyen különbség a főképernyőn lévő egyenleghez képest még nincs megerősítve és így még nem lehet elkölteni.
 		</p>
 		<p>
@@ -60,7 +60,7 @@
 		</p>
 		<p>
 			Adhatsz meg kifizetést amíg offline vagy.
-			A Bitcoin Wallet következő újraindításánál lesz elküldve.
+			A Onixcoin Wallet következő újraindításánál lesz elküldve.
 			Ha azt szeretnéd, hogy a fizetés olyan gyorsan legyen feldolgozva, amennyire csak lehet, akkor bizonyosodj meg róla, hogy jól kapcsolódsz (azaz egy WLAN-on).
 		</p>
 		<p>
@@ -76,8 +76,8 @@
 			<b>Fontos biztonsági tudnivalók:</b>
 		</p>
 		<p>
-			A Bitcoin-ok a készüléken vannak tárolva.
-			<b>Ha elveszted, akkor elveszted a Bitcoin-jaidat is.</b>
+			A Onixcoin-ok a készüléken vannak tárolva.
+			<b>Ha elveszted, akkor elveszted a Onixcoin-jaidat is.</b>
 		</p>
 		<p>
 			Ez azt jelenti, hogy készítened kell <b>biztonsági mentést a tárcádról</b>!
@@ -85,12 +85,12 @@
 			Tartsd a biztonsági mentésed biztonságban és emlékezz a jelszóra.
 		</p>
 		<p>
-			<b>Eltávolítás előtt</b> (vagy alkalmazás adatainak törlése/készüléked törlése előtt), <b>utald át a Bitcoin-jaidat másik tárcába</b>.
-			A fennmaradó Bitcoin-ok elvesznek.
+			<b>Eltávolítás előtt</b> (vagy alkalmazás adatainak törlése/készüléked törlése előtt), <b>utald át a Onixcoin-jaidat másik tárcába</b>.
+			A fennmaradó Onixcoin-ok elvesznek.
 		</p>
 		<p>
 			<b>A kifizetések visszafordíthatatlanok</b>.
-			Ha elküldöd a Bitcoin-jaidat a semmibe, szinte nincs rá mód, hogy visszakapd.
+			Ha elküldöd a Onixcoin-jaidat a semmibe, szinte nincs rá mód, hogy visszakapd.
 		</p>
 		<p>
 			<b>Tartsd a mobilkészüléked biztonságban!</b>

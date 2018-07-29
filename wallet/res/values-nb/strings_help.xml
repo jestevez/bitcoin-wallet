@@ -7,7 +7,7 @@
 			Trykk for å gå til listen over nasjonale valutaer, og trykk så på en av valutaene for å velge den som standard.
 		</p>
 		<p>
-			QR-koden til høyre inneholder din Bitcoin-adresse og kan brukes til skanning av noen andre.
+			QR-koden til høyre inneholder din Onixcoin-adresse og kan brukes til skanning av noen andre.
 			Trykk på QR-koden for å få en større versjon av den.
 		</p>
 		<p>
@@ -24,15 +24,15 @@
   <string name="help_request_coins">
 <![CDATA[
     <p>
-      Ved å bruke denne dialogen kan du be om mynter fra en annen person (som allerede har installert Bitcoin Wallet).
+      Ved å bruke denne dialogen kan du be om mynter fra en annen person (som allerede har installert Onixcoin Wallet).
     </p>
     <p>
-      Først kan du legge inn et beløp på antall bitcoins som skal forespørres.
+      Først kan du legge inn et beløp på antall onixcoins som skal forespørres.
     </p>
     <p>
       Etterpå får du enten QR-koden skannet av den andre personen,
       eller så kan du sende en forespørsel til en person langt unna med del-knappen i handlingsfeltet.
-      Den andre personen skal klikke på Bitcoin-URLen.
+      Den andre personen skal klikke på Onixcoin-URLen.
     </p>
     <p>
       Den andre personen vil bli presentert en dialog for å sende mynter med alle felt forhåndsutfylt.
@@ -44,15 +44,15 @@
 <![CDATA[
     <p>
       Du har startet prosessen med å sende mynter.
-      Du kom hit enten via hovedskjermen eller ved å klikke på en Bitcoin-URL i nettleseren på mobilen.
+      Du kom hit enten via hovedskjermen eller ved å klikke på en Onixcoin-URL i nettleseren på mobilen.
     </p>
     <p>
-      Først skriver du inn den Bitcoin-adressen du vil betale til.
+      Først skriver du inn den Onixcoin-adressen du vil betale til.
       Adressen vil automatisk fylles ut fra kjente oppføringer i adresseboken din.
-      Du kan også skanne QR-koder med Bitcoin-adresser eller Bitcoin-forespørsler ved å trykke på QR-knappen i handlingsfeltet.
+      Du kan også skanne QR-koder med Onixcoin-adresser eller Onixcoin-forespørsler ved å trykke på QR-knappen i handlingsfeltet.
     </p>
     <p>
-      Deretter kan du se hvor mange bitcoins du kan bruke for øyeblikket.
+      Deretter kan du se hvor mange onixcoins du kan bruke for øyeblikket.
       En eventuell forskjell i saldoen fra hovedskjermen er fortsatt ubekreftet, og kan dermed ikke brukes.
     </p>
     <p>
@@ -60,7 +60,7 @@
     </p>
     <p>
       Du kan legge inn en betaling mens du er offline.
-      Den vil bli sendt når Bitcoin Wallet startes på nytt.
+      Den vil bli sendt når Onixcoin Wallet startes på nytt.
       Hvis du ønsker at en betaling går igjennom så raskt som mulig, sørg for at du er godt tilkoblet (dvs. på et WLAN).
     </p>
     <p>
@@ -76,8 +76,8 @@
       <b>Viktige sikkerhetsmerknader:</b>
     </p>
     <p>
-      Bitcoins er lagret på enheten.
-      <b>Hvis du mister den, mister du dine bitcoins.</b>
+      Onixcoins er lagret på enheten.
+      <b>Hvis du mister den, mister du dine onixcoins.</b>
     </p>
     <p>
       Dette betyr at du må <b>sikkerhetskopiere lommeboken din</b>!
@@ -85,12 +85,12 @@
       Oppbevar sikkerhetskopien sikkert og husk passordet.
     </p>
     <p>
-      <b>Før avinstallering</b> (eller sletting av appdata/nullstilling av enheten til fabrikkinnstillinger), <b>overfør dine bitcoins til en annen lommebok</b>.
-      Resterende bitcoins vil gå tapt.
+      <b>Før avinstallering</b> (eller sletting av appdata/nullstilling av enheten til fabrikkinnstillinger), <b>overfør dine onixcoins til en annen lommebok</b>.
+      Resterende onixcoins vil gå tapt.
     </p>
     <p>
       <b>Betalinger er irreversible</b>.
-      Hvis du sender dine bitcoins ut i det blå, er det stort sett ikke mulig å få dem tilbake.
+      Hvis du sender dine onixcoins ut i det blå, er det stort sett ikke mulig å få dem tilbake.
     </p>
     <p>
       <b>Oppbevar din mobile enhet sikkert!</b>
@@ -110,7 +110,7 @@
       <b>Tekniske notater:</b>
     </p>
     <p>
-      Som SPV-lommebok, følger Bitcoin Wallet den blokkjeden med mest proof-of-work (noen ganger også kalt den \"lengste kjeden\", den \"vinnende kjeden\" eller \"Bitcoin-Blockchain\").
+      Som SPV-lommebok, følger Onixcoin Wallet den blokkjeden med mest proof-of-work (noen ganger også kalt den \"lengste kjeden\", den \"vinnende kjeden\" eller \"Onixcoin-Blockchain\").
       Du vil bare motta innbetalinger og være i stand til å betale på denne kjeden.
       Ingen garantier kan gis for bitcoin på minoritetskjeder, som er kjeder med mindre proof-of-work.
     </p>
