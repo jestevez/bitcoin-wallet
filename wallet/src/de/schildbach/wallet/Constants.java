@@ -42,7 +42,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
  * @author Andreas Schildbach
  */
 public final class Constants {
-    public static final boolean TEST = true;
+    public static final boolean TEST = false;
 
     /** Network this wallet is on (e.g. testnet or mainnet). */
     public static final AbstractOnixcoinParams NETWORK_PARAMETERS = TEST ? OnixcoinTestNetParams.get() : OnixcoinMainNetParams.get();
@@ -53,9 +53,9 @@ public final class Constants {
     /** Enable switch for synching of the blockchain */
     public static final boolean ENABLE_BLOCKCHAIN_SYNC = true;
     /** Enable switch for fetching and showing of exchange rates */
-    public static final boolean ENABLE_EXCHANGE_RATES = false;
+    public static final boolean ENABLE_EXCHANGE_RATES = true;
     /** Enable switch for sweeping of paper wallets */
-    public static final boolean ENABLE_SWEEP_WALLET = false;
+    public static final boolean ENABLE_SWEEP_WALLET = true;
     /** Enable switch for browsing to block explorers */
     public static final boolean ENABLE_BROWSE = true;
 
@@ -191,9 +191,9 @@ public final class Constants {
 
     /** Default ports for Electrum servers */
     public static final int ELECTRUM_SERVER_DEFAULT_PORT_TCP = NETWORK_PARAMETERS.getId()
-            .equals(org.onixcoinj.params.AbstractOnixcoinParams.ID_ONIX_MAINNET) ? 23000 : 23001;
+            .equals(org.onixcoinj.params.AbstractOnixcoinParams.ID_ONIX_MAINNET) ? 23000 : 23000;
     public static final int ELECTRUM_SERVER_DEFAULT_PORT_TLS = NETWORK_PARAMETERS.getId()
-            .equals(org.onixcoinj.params.AbstractOnixcoinParams.ID_ONIX_MAINNET) ? 23000 : 23001;
+            .equals(org.onixcoinj.params.AbstractOnixcoinParams.ID_ONIX_MAINNET) ? 23001 : 23001;
 
     /** Shared HTTP client, can reuse connections */
     public static final OkHttpClient HTTP_CLIENT;

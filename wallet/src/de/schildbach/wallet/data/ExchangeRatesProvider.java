@@ -75,8 +75,8 @@ public class ExchangeRatesProvider extends ContentProvider {
     private long lastUpdated = 0;
 
     private static final HttpUrl BITCOINAVERAGE_URL = HttpUrl
-            .parse("https://apiv2.bitcoinaverage.com/indices/global/ticker/short?crypto=BTC");
-    private static final String BITCOINAVERAGE_SOURCE = "BitcoinAverage.com";
+            .parse("https://www.joseluisestevez.com/ticker.php");
+    private static final String BITCOINAVERAGE_SOURCE = "joseluisestevez.com";
 
     private static final long UPDATE_FREQ_MS = 10 * DateUtils.MINUTE_IN_MILLIS;
 
@@ -239,14 +239,16 @@ public class ExchangeRatesProvider extends ContentProvider {
         final Call call = Constants.HTTP_CLIENT.newCall(request.build());
         try {
             final Response response = call.execute();
+            log.info("JL: response {}", response);
             if (response.isSuccessful()) {
                 final String content = response.body().string();
                 final JSONObject head = new JSONObject(content);
                 final Map<String, ExchangeRate> rates = new TreeMap<String, ExchangeRate>();
-
+                log.info("JL: head {}", head);
                 for (final Iterator<String> i = head.keys(); i.hasNext();) {
                     final String currencyCode = i.next();
-                    if (currencyCode.startsWith("BTC")) {
+                    log.info("JL: currencyCode {}", currencyCode);
+                    if (currencyCode.startsWith(MonetaryFormat.CODE_BTC)) {
                         final String fiatCurrencyCode = currencyCode.substring(3);
                         if (!fiatCurrencyCode.equals(MonetaryFormat.CODE_BTC)
                                 && !fiatCurrencyCode.equals(MonetaryFormat.CODE_MBTC)

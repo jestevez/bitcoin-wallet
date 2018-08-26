@@ -21,12 +21,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -51,6 +53,8 @@ import org.bitcoinj.core.Sha256Hash;
 import org.bitcoinj.core.UTXO;
 import org.bitcoinj.script.Script;
 import org.bitcoinj.script.ScriptBuilder;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -67,6 +71,8 @@ import de.schildbach.wallet.R;
 import android.content.res.AssetManager;
 import android.os.Handler;
 import android.os.Looper;
+
+import de.schildbach.wallet.info.onixcoin.api.OnixcoinInfoApi;
 import okio.BufferedSink;
 import okio.BufferedSource;
 import okio.Okio;
@@ -119,13 +125,39 @@ public final class RequestWalletBalanceTask {
         }
     }
 
+    private Set<UTXO> requestAddressUtxo(final Address address) throws Exception {
+        Set<UTXO> utxos = new HashSet<>();
+        JSONArray array = OnixcoinInfoApi.addrUtxo(address.toString());
+
+        for(int i=0; i<array.length(); i++) {
+            JSONObject utxo = array.getJSONObject(i);
+
+            BigDecimal amount = new BigDecimal(utxo.getString("amount"));
+
+            String txid = utxo.getString("txid");
+            JSONObject tx = OnixcoinInfoApi.tx(txid);
+            int size = tx.getInt("size");
+
+            final Sha256Hash utxoHash = Sha256Hash.wrap(txid);
+            final int utxoIndex = i;
+            final Coin utxoValue = Coin.valueOf(amount.multiply(new BigDecimal("100000000")).longValue());
+            final Script script = ScriptBuilder.createOutputScript(address);
+            final int height = size;
+            final UTXO utxoj = new UTXO(utxoHash, utxoIndex, utxoValue, height, false, script);
+
+            utxos.add(utxoj);
+            i++;
+        }
+        return utxos;
+    }
+
     public void requestWalletBalance(final AssetManager assets, final Address address) {
         backgroundHandler.post(new Runnable() {
             @Override
             public void run() {
                 org.bitcoinj.core.Context.propagate(Constants.CONTEXT);
 
-                try {
+                /*try {
                     final List<ElectrumServer> servers = loadElectrumServers(
                             assets.open(Constants.Files.ELECTRUM_SERVERS_FILENAME));
                     final ElectrumServer server = servers.get(new Random().nextInt(servers.size()));
@@ -191,6 +223,15 @@ public final class RequestWalletBalanceTask {
                     log.info("problem parsing json", x);
                     onFail(R.string.error_parse, x.getMessage());
                 } catch (final IOException x) {
+                    log.info("problem querying unspent outputs", x);
+                    onFail(R.string.error_io, x.getMessage());
+                }
+                */
+                try {
+                    // JL Vamos ausar el api de onixcoin.info el server electrum da problemas
+                    Set<UTXO> utxos = requestAddressUtxo(address);
+                    onResult(utxos);
+                } catch (final Exception x) {
                     log.info("problem querying unspent outputs", x);
                     onFail(R.string.error_io, x.getMessage());
                 }

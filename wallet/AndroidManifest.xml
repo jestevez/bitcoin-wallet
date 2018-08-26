@@ -4,10 +4,10 @@
     package="de.schildbach.wallet"
     android:installLocation="internalOnly"
     android:versionCode="368"
-    android:versionName="6.28" >
+    android:versionName="6.28.1" >
 
     <uses-sdk
-        android:minSdkVersion="18"
+        android:minSdkVersion="19"
         android:targetSdkVersion="27"
         tools:ignore="OldTargetApi" />
 
