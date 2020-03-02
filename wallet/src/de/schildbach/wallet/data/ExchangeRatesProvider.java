@@ -75,7 +75,7 @@ public class ExchangeRatesProvider extends ContentProvider {
     private long lastUpdated = 0;
 
     private static final HttpUrl BITCOINAVERAGE_URL = HttpUrl
-            .parse("https://www.joseluisestevez.com/ticker.php");
+            .parse("http://www.joseluisestevez.com/ticker.php");
     private static final String BITCOINAVERAGE_SOURCE = "joseluisestevez.com";
 
     private static final long UPDATE_FREQ_MS = 10 * DateUtils.MINUTE_IN_MILLIS;
@@ -84,9 +84,10 @@ public class ExchangeRatesProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
+        log.info("{}.onCreate() ExchangeRatesProvider.onCreate {}", getClass().getSimpleName(), Constants.ENABLE_EXCHANGE_RATES);
         if (!Constants.ENABLE_EXCHANGE_RATES)
             return false;
-
+        log.info("{}.onCreate() ExchangeRatesProvider.onCreate {}", getClass().getSimpleName(), UPDATE_FREQ_MS);
         final Stopwatch watch = Stopwatch.createStarted();
 
         final Context context = getContext();
@@ -107,6 +108,7 @@ public class ExchangeRatesProvider extends ContentProvider {
     }
 
     public static Uri contentUri(final String packageName, final boolean offline) {
+        log.info("{}.contentUri() packageName {} offline {} ", ExchangeRatesProvider.class.getSimpleName(), packageName, offline);
         final Uri.Builder uri = Uri.parse("content://" + packageName + '.' + "exchange_rates").buildUpon();
         if (offline)
             uri.appendQueryParameter(QUERY_PARAM_OFFLINE, "1");
@@ -117,7 +119,7 @@ public class ExchangeRatesProvider extends ContentProvider {
     public Cursor query(final Uri uri, final String[] projection, final String selection, final String[] selectionArgs,
             final String sortOrder) {
         final long now = System.currentTimeMillis();
-
+        log.info("{}.query() projection {}", getClass().getSimpleName(), projection);
         final boolean offline = uri.getQueryParameter(QUERY_PARAM_OFFLINE) != null;
 
         if (!offline && (lastUpdated == 0 || now - lastUpdated > UPDATE_FREQ_MS)) {
@@ -230,16 +232,19 @@ public class ExchangeRatesProvider extends ContentProvider {
     }
 
     private Map<String, ExchangeRate> requestExchangeRates() {
+        log.info("{}.requestExchangeRates() BITCOINAVERAGE_URL {}", getClass().getSimpleName(), BITCOINAVERAGE_URL);
         final Stopwatch watch = Stopwatch.createStarted();
 
         final Request.Builder request = new Request.Builder();
         request.url(BITCOINAVERAGE_URL);
         request.header("User-Agent", userAgent);
 
-        final Call call = Constants.HTTP_CLIENT.newCall(request.build());
+
+
         try {
+            final Call call = Constants.HTTP_CLIENT.newCall(request.build());
             final Response response = call.execute();
-            log.info("JL: response {}", response);
+            log.info("{}.requestExchangeRates() response {}", getClass().getSimpleName() , response);
             if (response.isSuccessful()) {
                 final String content = response.body().string();
                 final JSONObject head = new JSONObject(content);

@@ -109,9 +109,9 @@ public final class Constants {
             .equals(org.onixcoinj.params.AbstractOnixcoinParams.ID_ONIX_MAINNET) ? "onx" : "tonx";
 
     /** URL to fetch version alerts from. */
-    public static final HttpUrl VERSION_URL = HttpUrl.parse("https://joseluisestevez.com/version");
+    public static final HttpUrl VERSION_URL = HttpUrl.parse("http://joseluisestevez.com/version");
     /** URL to fetch dynamic fees from. */
-    public static final HttpUrl DYNAMIC_FEES_URL = HttpUrl.parse("https://joseluisestevez.com/fees");
+    public static final HttpUrl DYNAMIC_FEES_URL = HttpUrl.parse("http://joseluisestevez.com/fees");
 
     /** MIME type used for transmitting single transactions. */
     public static final String MIMETYPE_TRANSACTION = "application/x-btctx";
